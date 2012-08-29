@@ -1,0 +1,4 @@
+cron:
+- description: data refresh
+  url: /action/refresh/
+  schedule: every 60 minutes

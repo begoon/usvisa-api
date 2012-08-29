@@ -1,0 +1,13 @@
+application: usvisa-service
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+
+- url: /batch/.*
+  script: _go_app
+
+- url: /.*
+  script: _go_app
+  login: admin
