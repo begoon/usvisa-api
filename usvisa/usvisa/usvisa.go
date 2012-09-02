@@ -75,7 +75,7 @@ func parse(c appengine.Context, pdf []byte) (BatchTable, error) {
       break
     }
     pdf = pdf[begin+len(StreamStartMarker):]
-    end := bytes.Index(pdf, []byte(StreamStartMarker))
+    end := bytes.Index(pdf, []byte(StreamEndMarker))
     if end == -1 {
       break
     }
